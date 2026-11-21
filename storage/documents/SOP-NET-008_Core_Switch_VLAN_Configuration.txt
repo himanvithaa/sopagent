@@ -1,0 +1,37 @@
+STANDARD OPERATING PROCEDURE: SWITCH VLAN & ROUTING CONFIGURATION
+Document ID: SOP-NET-008 | Category: Network Management | Version: 5.0
+Effective Date: 2026-04-12 | Authorization: Network Architecture Board
+
+1. PURPOSE
+Mandatory procedure for modifying VLAN assignments, trunk ports, and BGP peering sessions on datacenter distribution switches.
+
+2. PRE-CONFIGURATION AUDIT CHECKLIST
+Step 1: Backup current running-config before any modification:
+  - Cisco NX-OS: copy running-config bootflash:backup-$(date +%Y%m%d).cfg
+  - Juniper Junos: commit confirmed 10 (reverts automatically if connection drops)
+Step 2: Verify existing VLAN database:
+  - Check VLAN presence: show vlan brief
+  - Verify spanning-tree root bridge: show spanning-tree vlan <vlan-id>
+
+3. VLAN CREATION & TRUNK ASSIGNMENT STEPS
+Step 3: Provision new VLAN on core switch:
+  - conf t
+  - vlan 250
+  - name APP_TIER_INTERNAL
+  - end
+Step 4: Tag VLAN on 802.1Q trunk uplink interfaces:
+  - interface Ethernet1/49-50
+  - switchport trunk allowed vlan add 250
+  - description UPLINK-TO-DIST-SW02
+Step 5: Verify spanning-tree topology is stable:
+  - show spanning-tree vlan 250 detail | grep -i 'root|topology'
+
+4. BGP PEERING AUDIT & TROUBLESHOOTING
+Step 6: Check neighbor adjacency state:
+  - show ip bgp summary
+  - If state is ACTIVE or IDLE, check MTU mismatch and TCP port 179 reachability.
+  - Test ping with do-not-fragment bit: ping 10.254.1.1 df-bit size 1500
+
+5. SAFETY WARNINGS
+- WARNING: Always utilize 'commit confirmed 10' on Juniper devices to prevent accidental lockout.
+- Never configure trunk native VLAN as VLAN 1. Default untagged traffic must be routed to isolated blackhole VLAN 999.

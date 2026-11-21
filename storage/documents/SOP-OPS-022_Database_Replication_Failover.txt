@@ -1,0 +1,35 @@
+STANDARD OPERATING PROCEDURE: DATABASE REPLICATION LAG & FAILOVER
+Document ID: SOP-OPS-022 | Category: Troubleshooting | Version: 3.8
+Effective Date: 2026-05-18 | Incident Priority: P1 / P2
+
+1. SCOPE
+Covers PostgreSQL streaming replication and MySQL semi-synchronous replication failovers across multi-zone datacenter clusters.
+
+2. LAG DETECTION & METRIC EVALUATION
+Step 1: Query replication delay on standby replicas:
+  - PostgreSQL: SELECT client_addr, state, sync_state, pg_wal_lsn_diff(pg_current_wal_lsn(), replay_lsn) AS replay_lag_bytes FROM pg_stat_replication;
+  - MySQL: SHOW REPLICA STATUS\G (Inspect Seconds_Behind_Source)
+Step 2: If replication lag exceeds 60 seconds or 500MB WAL backlog:
+  - Inspect disk I/O saturation on replica: iostat -xz 1 10
+  - Check if long-running analytical queries are blocking VACUUM or WAL apply workers:
+    SELECT pid, now() - pg_stat_activity.query_start AS duration, query FROM pg_stat_activity WHERE state != 'idle' ORDER BY duration DESC LIMIT 5;
+
+3. CORRECTIVE MITIGATION STEPS
+Action A: Terminate blocking query on replica:
+  - SELECT pg_cancel_backend(<pid>); or SELECT pg_terminate_backend(<pid>);
+Action B: If network bandwidth bottleneck is detected:
+  - Enable WAL compression in postgresql.conf: wal_compression = zstd
+  - Reload configuration: SELECT pg_reload_conf();
+
+4. EMERGENCY MANUAL PROMOTION RUNBOOK (PRIMARY OUTAGE)
+Step 3: Confirm primary database host is definitively unreachable (fencing).
+Step 4: Promote most up-to-date standby replica:
+  - PostgreSQL command: pg_ctl promote -D /var/lib/postgresql/data
+  - Verify node is now read-write: SELECT pg_is_in_recovery(); (Must return FALSE)
+Step 5: Re-point application connection poolers (PgBouncer) via DNS / Consul service discovery:
+  - consul kv put service/database/primary-host "db-replica-01.internal"
+  - Reload PgBouncer: psql -p 6432 -U pgbouncer -c "RELOAD;"
+
+5. POST-FAILOVER VERIFICATION
+- Verify connection pool status and client error rates in Grafana dashboard.
+- Notify DBA on-call team for split-brain inspection before bringing old primary back online.

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="operaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="50%" stop-color="#4FACFE" />
+      <stop offset="100%" stop-color="#00C9FF" />
+    </linearGradient>
+    <linearGradient id="facetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14B8A6" />
+      <stop offset="100%" stop-color="#0EA5E9" />
+    </linearGradient>
+  </defs>
+  <!-- Outer Geometric Hexagonal Crystal -->
+  <polygon points="50,10 88,32 88,68 50,90 12,68 12,32" stroke="url(#operaGrad)" stroke-width="4" stroke-linejoin="round" fill="#0D1527" />
+  <!-- Inner Facets representing multi-dimensional document retrieval -->
+  <polygon points="50,10 50,50 12,32" fill="#0EA5E9" fill-opacity="0.25" stroke="url(#facetGrad)" stroke-width="2" />
+  <polygon points="50,10 88,32 50,50" fill="#14B8A6" fill-opacity="0.35" stroke="url(#facetGrad)" stroke-width="2" />
+  <polygon points="50,50 88,68 50,90" fill="#06B6D4" fill-opacity="0.2" stroke="url(#facetGrad)" stroke-width="2" />
+  <polygon points="50,50 50,90 12,68" fill="#0284C7" fill-opacity="0.4" stroke="url(#facetGrad)" stroke-width="2" />
+  <!-- Center Core Node -->
+  <circle cx="50" cy="50" r="6" fill="#F8FAFC" />
+  <circle cx="50" cy="50" r="10" stroke="#00F2FE" stroke-width="2" stroke-dasharray="3 3" />
+</svg>

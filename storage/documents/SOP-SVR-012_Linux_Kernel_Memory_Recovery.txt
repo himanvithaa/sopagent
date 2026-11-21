@@ -1,0 +1,32 @@
+STANDARD OPERATING PROCEDURE: LINUX KERNEL PANIC & MEMORY RECOVERY
+Document ID: SOP-SVR-012 | Category: Server Maintenance | Version: 2.5
+Effective Date: 2026-03-10 | Maintenance Tier: 2
+
+1. SCOPE
+Applies to Ubuntu 22.04 LTS and RHEL 9 production hosts running container workloads, databases, and microservices.
+
+2. SYMPTOM DIAGNOSIS & IDENTIFICATION
+Step 1: Check memory consumption and swap utilization:
+  - Run memory overview: free -h -w
+  - Inspect top memory-consuming processes: ps aux --sort=-%mem | head -n 15
+Step 2: Check kernel Out-Of-Memory (OOM) killer invocations:
+  - Inspect kernel messages: sudo dmesg -T | grep -i -E 'oom-killer|out of memory|killed process'
+  - View journal log: sudo journalctl -k -b -0 --grep="invoked oom-killer"
+Step 3: Analyze dirty memory pages and buffer cache:
+  - Inspect vmstat: vmstat 1 10
+  - Check active slab allocations: sudo slabtop -o
+
+3. STEP-BY-STEP RECOVERY ACTIONS
+Action 1: Immediate pressure relief:
+  - Gracefully throttle runaway batch worker processes: sudo systemctl stop worker-celery@*
+  - If server is thrashing swap space: echo 3 | sudo tee /proc/sys/vm/drop_caches (ONLY if I/O is non-critical)
+Action 2: Adjust OOM score adjustments for critical daemons:
+  - Protect database daemon: echo -1000 | sudo tee /proc/$(pgrep mysqld)/oom_score_adj
+Action 3: Recovery from soft lockup / CPU stalls:
+  - Check kernel panic logs saved by kdump in /var/crash/
+  - Analyze crash dump with crash utility: crash /usr/lib/debug/... /var/crash/.../vmcore
+
+4. PRECAUTIONARY NOTES & TUNING
+- DO NOT disable swap entirely on hosts with overcommit enabled (vm.overcommit_memory=2).
+- Ensure vm.swappiness is set between 10 and 20 for database servers.
+- If reboot is unavoidable, issue sysrq sync first: echo s | sudo tee /proc/sysrq-trigger

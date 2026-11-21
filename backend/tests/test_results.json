@@ -1,0 +1,778 @@
+{
+  "timestamp": "2026-11-21T15:58:52Z",
+  "total_tests": 14,
+  "passed_tests": 14,
+  "success_rate": 100.0,
+  "results": [
+    {
+      "test_id": "A1",
+      "group": "A",
+      "query": "What is the purpose of preventive maintenance?",
+      "expected_doc": "SOP-MNT-001",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "actual_sources": [
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 1,
+          "section_title": "1. Purpose",
+          "excerpt": "1. Purpose\nThe purpose of preventive maintenance under SOP-MNT-001 is to establish a standardized protocol for scheduled\ninspection, precision lubrication, mechanical calibration, and electrical integrity checks on heavy production machinery.\nAdherence to this procedure minimizes...",
+          "relevance_score": 0.907
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 2,
+          "section_title": "6. Step-by-Step Preventive Maintenance Procedure",
+          "excerpt": "6. Step-by-Step Preventive Maintenance Procedure",
+          "relevance_score": 0.86
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 4,
+          "section_title": "10. Documentation & Maintenance Records",
+          "excerpt": "10. Documentation & Maintenance Records\nAll preventive maintenance activities must be documented within 60 minutes of completion in the facility CMMS. Records\nmust capture: machine serial number, technician badge ID, elapsed operating hours, exact volume and batch numbers of\nlubr...",
+          "relevance_score": 0.798
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 1,
+          "section_title": "1. Purpose",
+          "excerpt": "1. Purpose\nThe purpose of SOP-IT-002 is to establish a rigorous, disciplined engineering methodology for rapidly diagnosing, triaging,\nand resolving enterprise network disruptions. This procedure enforces structured fault isolation across the OSI stack,\neliminates ad-hoc troubles...",
+          "relevance_score": 0.685
+        }
+      ],
+      "relevant_sop_found": "SOP-MNT-001: Industrial Machine Preventive Maintenance (Section: 1. Purpose, Page 1)",
+      "understanding": "Analysis of operational query: 'What is the purpose of preventive maintenance?'. Correlated with procedure 'SOP-MNT-001: Industrial Machine Preventive Maintenance'.",
+      "actions": [
+        "The purpose of preventive maintenance under SOP-MNT-001 is to establish a standardized protocol for scheduled",
+        "inspection, precision lubrication, mechanical calibration, and electrical integrity checks on heavy production machinery.",
+        "Adherence to this procedure minimizes unplanned downtime, prevents catastrophic mechanical spindle failure, ensures",
+        "Step-by-Step Preventive Maintenance Procedure",
+        "Documentation & Maintenance Records"
+      ],
+      "important_notes": [
+        "Document all remediation steps in the operational logbook or ticketing system.",
+        "Escalate to designated supervisor if conditions do not normalize within SLA limits.",
+        "Grounded directly via ChromaDB semantic retrieval (Engine: daemon offline)."
+      ],
+      "elapsed_ms": 68,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "A2",
+      "group": "A",
+      "query": "What checks are included in the inspection process?",
+      "expected_doc": "SOP-MNT-001",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "actual_sources": [
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 3,
+          "section_title": "7. Comprehensive Inspection Checklist (Part 1)",
+          "excerpt": "7. Comprehensive Inspection Checklist\nIte\nm\nComponent Checked\nInspection Method\nAcceptance Standard\nFrequency\n1\nHydraulic Oil Reservoir\nVisual sight glass inspection\nLevel between MIN/MAX; amber color; no foam\nDaily\n2\nPneumatic FRL Unit\nPressure gauge reading\n6.0 bar \u00b1 0.2 bar; m...",
+          "relevance_score": 0.787
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 3,
+          "section_title": "9. Escalation Procedure (Part 1)",
+          "excerpt": "9. Escalation Procedure\nIssues identified during inspection or operation must be escalated according to the following strict criteria:\nLevel 1 Escalation (Operational Anomaly): Minor fluid seepage (< 5 drops/min) or cosmetic belt wear. Action: Log in\nCMMS work order system, reple...",
+          "relevance_score": 0.675
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 3,
+          "section_title": "9. Escalation Procedure (Part 2)",
+          "excerpt": "0 minutes; suspend high-speed finishing cycles.\nLevel 3 Critical Escalation (Safety / Imminent Failure): Spindle bearing seizure, hydraulic pressure loss exceeding\n20%, failure of any Emergency Stop button, structural casting crack, or smoke/burning odor. Action: Immediately hit\n...",
+          "relevance_score": 0.672
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 2,
+          "section_title": "Step 3: Linear Guides and Ballscrew Inspection",
+          "excerpt": "Step 3: Linear Guides and Ballscrew Inspection\nRetract way covers. Inspect linear guideway rails for scoring, pitting, or galling. Check ballscrew backlash using dial test\nindicator. Backlash exceeding 0.015mm requires immediate carriage adjustment.",
+          "relevance_score": 0.614
+        }
+      ],
+      "relevant_sop_found": "SOP-MNT-001: Industrial Machine Preventive Maintenance (Section: 7. Comprehensive Inspection Checklist (Part 1), Page 3)",
+      "understanding": "Analysis of operational query: 'What checks are included in the inspection process?'. Correlated with procedure 'SOP-MNT-001: Industrial Machine Preventive Maintenance'.",
+      "actions": [
+        "Comprehensive Inspection Checklist",
+        "Component Checked",
+        "Inspection Method",
+        "Visual sight glass inspection",
+        "Level between MIN/MAX; amber color; no foam",
+        "0 bar \u00b1 0.2 bar; moisture bowl empty"
+      ],
+      "important_notes": [
+        "Document all remediation steps in the operational logbook or ticketing system.",
+        "Escalate to designated supervisor if conditions do not normalize within SLA limits.",
+        "Grounded directly via ChromaDB semantic retrieval (Engine: daemon offline)."
+      ],
+      "elapsed_ms": 11,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "A3",
+      "group": "A",
+      "query": "What should an operator do when a machine fault is identified?",
+      "expected_doc": "SOP-MNT-001",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "actual_sources": [
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 3,
+          "section_title": "8. Common Faults & Corrective Actions (Part 1)",
+          "excerpt": "8. Common Faults & Corrective Actions\nWhen an operator or technician identifies a machine fault, execute the following verified corrective steps:\nIdentified Symptom\nProbable Root Cause\nImmediate Corrective Action Protocol\nSpindle excessive noise or\nvibration (> 2.8 mm/s)\nTool unb...",
+          "relevance_score": 0.99
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 2,
+          "section_title": "Step 1: Machine De-energization and Work Area Safety",
+          "excerpt": "Step 1: Machine De-energization and Work Area Safety\nNotify production supervisor, gracefully stop current program cycle, bring all axes to safe reference home positions,\ndisengage spindle drive, and execute 6-step Lockout/Tagout protocol.",
+          "relevance_score": 0.753
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 2,
+          "section_title": "Step 7: Re-energization, Homing & Test Run Verification",
+          "excerpt": "Step 7: Re-energization, Homing & Test Run Verification\nRemove all tools and personnel from machine envelope. Remove LOTO locks in accordance with facility procedure. Power\non CNC controller, execute reference homing cycle, and run 10-minute dry-run test program MNT-DRY-01 while ...",
+          "relevance_score": 0.731
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 1,
+          "section_title": "4. Required Tools and Equipment (Part 2)",
+          "excerpt": "transfer pump.\nSafety Equipment: Level 2 arc flash face shield, composite safety glasses, ASTM F2413 steel-toe footwear, thermal\nheat-resistant gloves, and OSHA-compliant red padlocks for LOTO.\nCONFIDENTIAL \u2013 ENTERPRISE OPERATIONAL USE ONLY\nPage 1 of 4",
+          "relevance_score": 0.725
+        }
+      ],
+      "relevant_sop_found": "SOP-MNT-001: Industrial Machine Preventive Maintenance (Section: 8. Common Faults & Corrective Actions (Part 1), Page 3)",
+      "understanding": "Analysis of operational query: 'What should an operator do when a machine fault is identified?'. Correlated with procedure 'SOP-MNT-001: Industrial Machine Preventive Maintenance'.",
+      "actions": [
+        "Common Faults & Corrective Actions",
+        "Immediate Corrective Action Protocol",
+        "Stop spindle immediately. Inspect toolholder taper for chips/runout.",
+        "Check bearing thermal delta using IR gun. If vibration persists with",
+        "balanced test arbor, tag machine out for bearing replacement.",
+        "Heat exchanger clogged, oil"
+      ],
+      "important_notes": [
+        "Document all remediation steps in the operational logbook or ticketing system.",
+        "Escalate to designated supervisor if conditions do not normalize within SLA limits.",
+        "Grounded directly via ChromaDB semantic retrieval (Engine: daemon offline)."
+      ],
+      "elapsed_ms": 11,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "A4",
+      "group": "A",
+      "query": "When should an issue be escalated?",
+      "expected_doc": "SOP-MNT-001",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "actual_sources": [
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 3,
+          "section_title": "9. Escalation Procedure (Part 1)",
+          "excerpt": "9. Escalation Procedure\nIssues identified during inspection or operation must be escalated according to the following strict criteria:\nLevel 1 Escalation (Operational Anomaly): Minor fluid seepage (< 5 drops/min) or cosmetic belt wear. Action: Log in\nCMMS work order system, reple...",
+          "relevance_score": 0.851
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 3,
+          "section_title": "8. Incident Escalation Protocol (Part 1)",
+          "excerpt": "8. Incident Escalation Protocol\nNetwork incidents must be escalated promptly to prevent SLA breaches according to the following time thresholds:\nTier-1 to Tier-2 Escalation: If root cause cannot be isolated within 20 minutes for P1/P2 incidents (or within 45\nminutes for P3), NOC ...",
+          "relevance_score": 0.652
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 3,
+          "section_title": "9. Escalation Procedure (Part 2)",
+          "excerpt": "0 minutes; suspend high-speed finishing cycles.\nLevel 3 Critical Escalation (Safety / Imminent Failure): Spindle bearing seizure, hydraulic pressure loss exceeding\n20%, failure of any Emergency Stop button, structural casting crack, or smoke/burning odor. Action: Immediately hit\n...",
+          "relevance_score": 0.65
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 3,
+          "section_title": "8. Incident Escalation Protocol (Part 2)",
+          "excerpt": "gency bridge on Microsoft\nTeams / Slack.\nHardware / Firmware Vendor TAC Escalation: If telemetry suggests ASIC microcode hang, kernel panic, or\nhardware fabric failure, open a Sev-1 TAC case with Cisco/Arista/Palo Alto within 45 minutes of incident declaration.\nUpload show tech-s...",
+          "relevance_score": 0.645
+        }
+      ],
+      "relevant_sop_found": "SOP-MNT-001: Industrial Machine Preventive Maintenance (Section: 9. Escalation Procedure (Part 1), Page 3)",
+      "understanding": "Analysis of operational query: 'When should an issue be escalated?'. Correlated with procedure 'SOP-MNT-001: Industrial Machine Preventive Maintenance'.",
+      "actions": [
+        "Escalation Procedure",
+        "Issues identified during inspection or operation must be escalated according to the following strict criteria:",
+        "Level 1 Escalation (Operational Anomaly): Minor fluid seepage (< 5 drops/min) or cosmetic belt wear. Action: Log in",
+        "Level 2 Escalation (Component Degradation): Vibration reading between 2.8 mm/s and 4.5 mm/s, thermal drift",
+        "Level 3 Critical Escalation (Safety / Imminent Failure): Spindle bearing",
+        "Level 3 Critical Escalation (Safety / Imminent Failure): Spindle bearing seizure, hydraulic pressure loss exceeding"
+      ],
+      "important_notes": [
+        "Document all remediation steps in the operational logbook or ticketing system.",
+        "Escalate to designated supervisor if conditions do not normalize within SLA limits.",
+        "Grounded directly via ChromaDB semantic retrieval (Engine: daemon offline)."
+      ],
+      "elapsed_ms": 11,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "B1",
+      "group": "B",
+      "query": "What information should be collected when reporting a network issue?",
+      "expected_doc": "SOP-IT-002",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "actual_sources": [
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 1,
+          "section_title": "5. Mandatory Information Collection (Part 1)",
+          "excerpt": "5. Mandatory Information Collection\nBefore modifying any production network configuration or bouncing interfaces, the responding engineer must collect and\nrecord the following information:\n1. Affected IP Addressing and Topology Context: Source and destination IP addresses, VLAN I...",
+          "relevance_score": 0.99
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 3,
+          "section_title": "9. Incident Reporting & Stakeholder Communications",
+          "excerpt": "9. Incident Reporting & Stakeholder Communications\nDuring active P1/P2 incidents, the Incident Commander must broadcast status bulletins every 30 minutes via the corporate\nstatus page and to the #net-incident-updates Slack channel. Bulletins must state: current operational impact...",
+          "relevance_score": 0.788
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 2,
+          "section_title": "7. Common Network Incidents & Documented Resolutions (Part 3)",
+          "excerpt": "ed.\nBGP neighbor flapping or stuck in\nConnect state\nMD5 authentication hash mismatch\nor ACL blocking TCP port 179\nVerify MD5 password string matches peer config. Ensure outbound\naccess-list permits tcp any any eq 179. Check route-map permit\nstatements.\nSTANDARD OPERATING PROCEDUR...",
+          "relevance_score": 0.73
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 2,
+          "section_title": "7. Common Network Incidents & Documented Resolutions (Part 1)",
+          "excerpt": "7. Common Network Incidents & Documented Resolutions\nSymptom / Error Code\nRoot Cause Identification\nVerified Corrective Resolution Protocol\nPort in err-disabled state\n(BPDUGUARD)\nUnauthorized unmanaged switch or\nbridge device connected to edge\naccess port\nDisconnect unauthorized ...",
+          "relevance_score": 0.724
+        }
+      ],
+      "relevant_sop_found": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution (Section: 5. Mandatory Information Collection (Part 1), Page 1)",
+      "understanding": "Analysis of operational query: 'What information should be collected when reporting a network issue?'. Correlated with procedure 'SOP-IT-002: IT Network Troubleshooting and Incident Resolution'.",
+      "actions": [
+        "Before modifying any production network configuration or bouncing interfaces, the responding engineer must collect and",
+        "Affected IP Addressing and Topology Context: Source and destination IP addresses, VLAN IDs, default gateway",
+        "Timing and Blast Radius: Precise timestamp of first packet drop, number of impacted users or services, and",
+        "Baseline Command Outputs: Record outputs of: show ip interface brief, show ip route <destination_ip>, show mac",
+        "Incident Reporting & Stakeholder Communications",
+        "BGP neighbor flapping or stuck in"
+      ],
+      "important_notes": [
+        "5. Mandatory Information Collection",
+        "Grounded directly via ChromaDB semantic retrieval (Engine: daemon offline)."
+      ],
+      "elapsed_ms": 8,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "B2",
+      "group": "B",
+      "query": "What are the troubleshooting steps for a connectivity problem?",
+      "expected_doc": "SOP-IT-002",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "actual_sources": [
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 1,
+          "section_title": "5. Mandatory Information Collection (Part 1)",
+          "excerpt": "5. Mandatory Information Collection\nBefore modifying any production network configuration or bouncing interfaces, the responding engineer must collect and\nrecord the following information:\n1. Affected IP Addressing and Topology Context: Source and destination IP addresses, VLAN I...",
+          "relevance_score": 0.668
+        },
+        {
+          "document_id": "SOP-SEC-004",
+          "document_title": "SOP-SEC-004: Emergency Security Incident Response & Credential Compromise Protocol",
+          "category": "Security",
+          "page_number": 1,
+          "section_title": "3. FORENSIC EVIDENCE PRESERVATION",
+          "excerpt": "l for critical security alerts, including leaked API keys, compromised admin credentials, and unauthorized SSH sessions.\n\n2. IMMEDIATE CONTAINMENT ACTIONS (0 - 15 MINUTES)\nStep 1: Revoke active session tokens immediately:\n  - Terminate user sessions in Okta / Identity Provider da...",
+          "relevance_score": 0.652
+        },
+        {
+          "document_id": "SOP-NET-008",
+          "document_title": "SOP-NET-008: Cisco & Juniper Core Switch VLAN Configuration & Routing Protocol Audit",
+          "category": "Network Management",
+          "page_number": 1,
+          "section_title": "3. VLAN CREATION & TRUNK ASSIGNMENT STEPS",
+          "excerpt": "ory procedure for modifying VLAN assignments, trunk ports, and BGP peering sessions on datacenter distribution switches.\n\n2. PRE-CONFIGURATION AUDIT CHECKLIST\nStep 1: Backup current running-config before any modification:\n  - Cisco NX-OS: copy running-config bootflash:backup-$(da...",
+          "relevance_score": 0.605
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 3,
+          "section_title": "8. Incident Escalation Protocol (Part 1)",
+          "excerpt": "8. Incident Escalation Protocol\nNetwork incidents must be escalated promptly to prevent SLA breaches according to the following time thresholds:\nTier-1 to Tier-2 Escalation: If root cause cannot be isolated within 20 minutes for P1/P2 incidents (or within 45\nminutes for P3), NOC ...",
+          "relevance_score": 0.579
+        }
+      ],
+      "relevant_sop_found": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution (Section: 5. Mandatory Information Collection (Part 1), Page 1)",
+      "understanding": "Analysis of operational query: 'What are the troubleshooting steps for a connectivity problem?'. Correlated with procedure 'SOP-IT-002: IT Network Troubleshooting and Incident Resolution'.",
+      "actions": [
+        "Before modifying any production network configuration or bouncing interfaces, the responding engineer must collect and",
+        "Affected IP Addressing and Topology Context: Source and destination IP addresses, VLAN IDs, default gateway",
+        "Timing and Blast Radius: Precise timestamp of first packet drop, number of impacted users or services, and",
+        "Baseline Command Outputs: Record outputs of: show ip interface brief, show ip route <destination_ip>, show mac",
+        "Incident Escalation Protocol",
+        "Tier-1 to Tier-2 Escalation: If root cause cannot be isolated within 20 minutes for P1/P2 incidents (or within 45"
+      ],
+      "important_notes": [
+        "5. Mandatory Information Collection",
+        "Grounded directly via ChromaDB semantic retrieval (Engine: daemon offline)."
+      ],
+      "elapsed_ms": 9,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "B3",
+      "group": "B",
+      "query": "How should an unresolved network incident be escalated?",
+      "expected_doc": "SOP-IT-002",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "actual_sources": [
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 3,
+          "section_title": "8. Incident Escalation Protocol (Part 1)",
+          "excerpt": "8. Incident Escalation Protocol\nNetwork incidents must be escalated promptly to prevent SLA breaches according to the following time thresholds:\nTier-1 to Tier-2 Escalation: If root cause cannot be isolated within 20 minutes for P1/P2 incidents (or within 45\nminutes for P3), NOC ...",
+          "relevance_score": 0.99
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 2,
+          "section_title": "7. Common Network Incidents & Documented Resolutions (Part 1)",
+          "excerpt": "7. Common Network Incidents & Documented Resolutions\nSymptom / Error Code\nRoot Cause Identification\nVerified Corrective Resolution Protocol\nPort in err-disabled state\n(BPDUGUARD)\nUnauthorized unmanaged switch or\nbridge device connected to edge\naccess port\nDisconnect unauthorized ...",
+          "relevance_score": 0.955
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 1,
+          "section_title": "4. Initial Incident Identification",
+          "excerpt": "4. Initial Incident Identification\nNetwork disruptions are identified through three primary ingestion channels: (1) Automated SNMP/gNMI telemetry alerts\nfrom SolarWinds and Datadog; (2) Syslog facility trap notifications indicating link flaps or BGP state changes; or (3)\nEnd-user...",
+          "relevance_score": 0.802
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 3,
+          "section_title": "11. Documentation & Post-Incident Review (PIR)",
+          "excerpt": "11. Documentation & Post-Incident Review (PIR)\nAll P1 and P2 network incidents require a completed Post-Incident Review (PIR) document submitted within 48 hours. The\nPIR must document: exact timeline of events, root cause analysis (5 Whys), preventative architectural remedies, an...",
+          "relevance_score": 0.796
+        }
+      ],
+      "relevant_sop_found": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution (Section: 8. Incident Escalation Protocol (Part 1), Page 3)",
+      "understanding": "Analysis of operational query: 'How should an unresolved network incident be escalated?'. Correlated with procedure 'SOP-IT-002: IT Network Troubleshooting and Incident Resolution'.",
+      "actions": [
+        "Incident Escalation Protocol",
+        "Tier-1 to Tier-2 Escalation: If root cause cannot be isolated within 20 minutes for P1/P2 incidents (or within 45",
+        "minutes for P3), NOC Tier-1 must page the on-call Tier-2 Network Engineer and attach all collected diagnostic outputs.",
+        "Tier-2 to Tier-3 / Incident Commander: If core datacenter connectivity loss persists past 30 minutes, escalate to",
+        "Common Network Incidents & Documented Resolutions",
+        "Verified Corrective Resolution Protocol"
+      ],
+      "important_notes": [
+        "Document all remediation steps in the operational logbook or ticketing system.",
+        "Escalate to designated supervisor if conditions do not normalize within SLA limits.",
+        "Grounded directly via ChromaDB semantic retrieval (Engine: daemon offline)."
+      ],
+      "elapsed_ms": 9,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "B4",
+      "group": "B",
+      "query": "How is resolution verified?",
+      "expected_doc": "SOP-IT-002",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "actual_sources": [
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 3,
+          "section_title": "10. Resolution Verification Workflow (Part 1)",
+          "excerpt": "10. Resolution Verification Workflow\nA network incident is never closed based on assumption. Complete the following mandatory verification steps before\nclosing:\nStep 1 (Ping Sweep & Latency Audit): Execute 100 continuous ICMP echo probes to affected gateways. Packet loss\nmust be ...",
+          "relevance_score": 0.901
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 2,
+          "section_title": "Step 2: Layer 2 (Data Link, VLAN & Spanning Tree Verification)",
+          "excerpt": "Step 2: Layer 2 (Data Link, VLAN & Spanning Tree Verification)\nVerify access and trunk port states. Check for BPDU Guard err-disabled states with show interface status err-disabled.\nInspect spanning-tree root bridge continuity with show spanning-tree vlan <vlan_id> to confirm no ...",
+          "relevance_score": 0.823
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 2,
+          "section_title": "7. Common Network Incidents & Documented Resolutions (Part 1)",
+          "excerpt": "7. Common Network Incidents & Documented Resolutions\nSymptom / Error Code\nRoot Cause Identification\nVerified Corrective Resolution Protocol\nPort in err-disabled state\n(BPDUGUARD)\nUnauthorized unmanaged switch or\nbridge device connected to edge\naccess port\nDisconnect unauthorized ...",
+          "relevance_score": 0.722
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 2,
+          "section_title": "7. Common Network Incidents & Documented Resolutions (Part 2)",
+          "excerpt": "optical Rx\npower remains below -14 dBm, swap SFP module and replace duplex\nfiber patch cable.\nTCP connection timeouts / SSL\nhandshake hang\nMTU path mismatch causing\npacket fragmentation drops (DF bit\nset)\nNormalize MTU to 1500 bytes (or 9216 for Jumbo fabric). On edge\nfirewalls, ...",
+          "relevance_score": 0.702
+        }
+      ],
+      "relevant_sop_found": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution (Section: 10. Resolution Verification Workflow (Part 1), Page 3)",
+      "understanding": "Analysis of operational query: 'How is resolution verified?'. Correlated with procedure 'SOP-IT-002: IT Network Troubleshooting and Incident Resolution'.",
+      "actions": [
+        "Resolution Verification Workflow",
+        "Step 1 (Ping Sweep & Latency Audit): Execute 100 continuous ICMP echo probes to affected gateways. Packet loss",
+        "Step 2 (Application Service Probe): Execute HTTP synthetic transaction check: curl -Iv -k --connect-timeout 5",
+        "Step 3 (Error Counter Freeze Verification): Run clear counters <interface> and observe for 15 minutes. Input errors,",
+        "Step 2: Layer 2 (Data Link, VLAN & Spanning Tree Verification)",
+        "Verify access and trunk port states. Check for BPDU Guard err-disabled states with show interface status err-disabled."
+      ],
+      "important_notes": [
+        "A network incident is never closed based on assumption. Complete the following mandatory verification steps before",
+        "Grounded directly via ChromaDB semantic retrieval (Engine: daemon offline)."
+      ],
+      "elapsed_ms": 10,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "C1",
+      "group": "C",
+      "query": "Compare the escalation processes in both SOPs.",
+      "expected_doc": "BOTH",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "actual_sources": [
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 3,
+          "section_title": "9. Escalation Procedure (Part 1)",
+          "excerpt": "9. Escalation Procedure\nIssues identified during inspection or operation must be escalated according to the following strict criteria:\nLevel 1 Escalation (Operational Anomaly): Minor fluid seepage (< 5 drops/min) or cosmetic belt wear. Action: Log in\nCMMS work order system, reple...",
+          "relevance_score": 0.899
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 3,
+          "section_title": "9. Escalation Procedure (Part 2)",
+          "excerpt": "0 minutes; suspend high-speed finishing cycles.\nLevel 3 Critical Escalation (Safety / Imminent Failure): Spindle bearing seizure, hydraulic pressure loss exceeding\n20%, failure of any Emergency Stop button, structural casting crack, or smoke/burning odor. Action: Immediately hit\n...",
+          "relevance_score": 0.886
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 3,
+          "section_title": "8. Incident Escalation Protocol (Part 1)",
+          "excerpt": "8. Incident Escalation Protocol\nNetwork incidents must be escalated promptly to prevent SLA breaches according to the following time thresholds:\nTier-1 to Tier-2 Escalation: If root cause cannot be isolated within 20 minutes for P1/P2 incidents (or within 45\nminutes for P3), NOC ...",
+          "relevance_score": 0.656
+        },
+        {
+          "document_id": "SOP-IT-001",
+          "document_title": "SOP-IT-001: Server Connectivity & Network Outage Troubleshooting Procedure",
+          "category": "IT Operations",
+          "page_number": 1,
+          "section_title": "3. NETWORK STACK DIAGNOSTIC PROTOCOL",
+          "excerpt": "ry to secondary internal DNS: dig @10.0.0.53 auth.internal.company.net\n  - Flush DNS cache: sudo resolvectl flush-caches\n\n5. SAFETY PRECAUTIONS & ESCALATION MATRIX\n- WARNING: Never execute 'systemctl restart networking' on bonded production interfaces during peak business hours (...",
+          "relevance_score": 0.584
+        }
+      ],
+      "relevant_sop_found": "SOP-MNT-001: Industrial Machine Preventive Maintenance & SOP-IT-002: IT Network Troubleshooting and Incident Resolution & SOP-IT-001: Server Connectivity & Network Outage Troubleshooting Procedure",
+      "understanding": "Comparative cross-procedural analysis for query: 'Compare the escalation processes in both SOPs.', synthesizing procedures across SOP-MNT-001: Industrial Machine Preventive Maintenance & SOP-IT-002: IT Network Troubleshooting and Incident Resolution & SOP-IT-001: Server Connectivity & Network Outage Troubleshooting Procedure.",
+      "actions": [
+        "[SOP-MNT-001 - 9. Escalation Procedure (Part 1)]: Escalation Procedure",
+        "[SOP-MNT-001 - 9. Escalation Procedure (Part 1)]: Issues identified during inspection or operation must be escalated according to the following strict criteria:",
+        "[SOP-MNT-001 - 9. Escalation Procedure (Part 1)]: Level 1 Escalation (Operational Anomaly): Minor fluid seepage (< 5 drops/min) or cosmetic belt wear. Action: Log in",
+        "[SOP-IT-002 - 8. Incident Escalation Protocol (Part 1)]: Incident Escalation Protocol",
+        "[SOP-IT-002 - 8. Incident Escalation Protocol (Part 1)]: Network incidents must be escalated promptly to prevent SLA breaches according to the following time thresholds:",
+        "[SOP-IT-002 - 8. Incident Escalation Protocol (Part 1)]: Tier-1 to Tier-2 Escalation: If root cause cannot be isolated within 20 minutes for P1/P2 incidents (or within 45",
+        "[SOP-IT-001 - 3. NETWORK STACK DIAGNOSTIC PROTOCOL]: Flush DNS cache: sudo resolvectl flush-caches",
+        "[SOP-IT-001 - 3. NETWORK STACK DIAGNOSTIC PROTOCOL]: Escalation: If packet loss exceeds 20% across multiple nodes on the same rack, immediately notify the Network Operations Center (NOC) Duty Manager and declare a P2 Incident."
+      ],
+      "important_notes": [
+        "[SOP-IT-001]: 5. SAFETY PRECAUTIONS & ESCALATION MATRIX",
+        "[SOP-IT-001]: - WARNING: Never execute 'systemctl restart networking' on bonded production interfaces during peak business hours (08:00 - 18:00 UTC) without Change Control approval."
+      ],
+      "elapsed_ms": 10,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "C2",
+      "group": "C",
+      "query": "What documentation is required in each process?",
+      "expected_doc": "BOTH",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "actual_sources": [
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 3,
+          "section_title": "11. Documentation & Post-Incident Review (PIR)",
+          "excerpt": "11. Documentation & Post-Incident Review (PIR)\nAll P1 and P2 network incidents require a completed Post-Incident Review (PIR) document submitted within 48 hours. The\nPIR must document: exact timeline of events, root cause analysis (5 Whys), preventative architectural remedies, an...",
+          "relevance_score": 0.735
+        },
+        {
+          "document_id": "SOP-GEN-003",
+          "document_title": "SOP-GEN-003: Change Management Approval & Scheduled Maintenance Notification Procedure",
+          "category": "General Procedures",
+          "page_number": 1,
+          "section_title": "3. SUBMISSION WORKFLOW & REQUIREMENTS",
+          "excerpt": "ication changes maintain service level agreements (SLAs), minimize downtime risks, and maintain traceable audit records.\n\n2. CHANGE CATEGORIZATION\n- Standard Change: Pre-approved, low-risk routine changes (e.g., certificate renewals, minor OS patch sets). Requires 24h notice.\n- N...",
+          "relevance_score": 0.731
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 4,
+          "section_title": "12. Document Revision History",
+          "excerpt": "12. Document Revision History\nVersion\nRelease Date\nDescription of Modifications\nApproved By\n1.0\n2024-03-15\nInitial baseline preventive maintenance procedure release\nD. Sterling\n2.0\n2025-04-10\nAdded hydraulic accumulator residual energy bleed protocol & OSHA LOTO steps\nS. Chen\n2.1...",
+          "relevance_score": 0.73
+        },
+        {
+          "document_id": "SOP-GEN-003",
+          "document_title": "SOP-GEN-003: Change Management Approval & Scheduled Maintenance Notification Procedure",
+          "category": "General Procedures",
+          "page_number": 1,
+          "section_title": "STANDARD OPERATING PROCEDURE: CHANGE MANAGEMENT & MAINTENANCE",
+          "excerpt": "STANDARD OPERATING PROCEDURE: CHANGE MANAGEMENT & MAINTENANCE\nDocument ID: SOP-GEN-003 | Category: General Procedures | Version: 6.0\nEffective Date: 2026-06-01 | Compliance: ITIL v4 / SOC2 Type II\n\n1. OBJECTIVE & COMPLIANCE\nEnsures that all infrastructure and application changes ...",
+          "relevance_score": 0.728
+        }
+      ],
+      "relevant_sop_found": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution & SOP-GEN-003: Change Management Approval & Scheduled Maintenance Notification Procedure & SOP-MNT-001: Industrial Machine Preventive Maintenance",
+      "understanding": "Comparative cross-procedural analysis for query: 'What documentation is required in each process?', synthesizing procedures across SOP-IT-002: IT Network Troubleshooting and Incident Resolution & SOP-GEN-003: Change Management Approval & Scheduled Maintenance Notification Procedure & SOP-MNT-001: Industrial Machine Preventive Maintenance.",
+      "actions": [
+        "[SOP-IT-002 - 11. Documentation & Post-Incident Review (PIR)]: Documentation & Post-Incident Review (PIR)",
+        "[SOP-IT-002 - 11. Documentation & Post-Incident Review (PIR)]: All P1 and P2 network incidents require a completed Post-Incident Review (PIR) document submitted within 48 hours. The",
+        "[SOP-IT-002 - 11. Documentation & Post-Incident Review (PIR)]: PIR must document: exact timeline of events, root cause analysis (5 Whys), preventative architectural remedies, and",
+        "[SOP-GEN-003 - 3. SUBMISSION WORKFLOW & REQUIREMENTS]: ication changes maintain service level agreements (SLAs), minimize downtime risks, and maintain traceable audit records.",
+        "[SOP-GEN-003 - 3. SUBMISSION WORKFLOW & REQUIREMENTS]: CHANGE CATEGORIZATION",
+        "[SOP-GEN-003 - 3. SUBMISSION WORKFLOW & REQUIREMENTS]: Standard Change: Pre-approved, low-risk routine changes (e.g., certificate renewals, minor OS patch sets). Requires 24h notice.",
+        "[SOP-MNT-001 - 12. Document Revision History]: Document Revision History",
+        "[SOP-MNT-001 - 12. Document Revision History]: 0"
+      ],
+      "important_notes": [
+        "Both operational procedures require auditable logging (CMMS for physical maintenance, ITSM/PIR for network incidents).",
+        "Adhere strictly to designated escalation thresholds and authorization protocols across departments."
+      ],
+      "elapsed_ms": 9,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "C3",
+      "group": "C",
+      "query": "Which roles are responsible for reporting issues in both processes?",
+      "expected_doc": "BOTH",
+      "expected_grounded": true,
+      "actual_grounded": true,
+      "actual_sources": [
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 1,
+          "section_title": "3. Roles and Responsibilities (Part 1)",
+          "excerpt": "3. Roles and Responsibilities\nMachine Operator: Conducts daily pre-shift visual walk-arounds, verifies fluid levels, records cycle run times, and\nimmediately reports abnormal acoustic signatures or vibration spikes.\nMaintenance Technician: Executes weekly and monthly mechanical, ...",
+          "relevance_score": 0.925
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 1,
+          "section_title": "3. Roles and Responsibilities (Part 1)",
+          "excerpt": "3. Roles and Responsibilities\nNOC Tier-1 Analyst: Performs initial alert ingestion, validates scope of outage, logs initial ITSM incident ticket, collects\nbaseline diagnostic outputs, and applies first-contact remediation checklists.\nNetwork Operations Engineer (Tier-2): Investig...",
+          "relevance_score": 0.879
+        },
+        {
+          "document_id": "SOP-MNT-001",
+          "document_title": "SOP-MNT-001: Industrial Machine Preventive Maintenance",
+          "category": "Industrial Maintenance",
+          "page_number": 1,
+          "section_title": "3. Roles and Responsibilities (Part 2)",
+          "excerpt": "hift handovers.\nLead Maintenance Engineer: Investigates recurring failures, analyzes infrared thermography and vibration FFT\nspectrum data, approves engineering change requests, and manages OEM vendor escalations.",
+          "relevance_score": 0.728
+        },
+        {
+          "document_id": "SOP-IT-002",
+          "document_title": "SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+          "category": "Network Management",
+          "page_number": 1,
+          "section_title": "3. Roles and Responsibilities (Part 2)",
+          "excerpt": "gency firmware workarounds, and leads post-incident architecture reviews.\nIncident Commander (IC): Owns executive bridge coordination, communicates outage updates to enterprise\nbusiness stakeholders every 30 minutes, and approves emergency change control exemptions.",
+          "relevance_score": 0.723
+        }
+      ],
+      "relevant_sop_found": "SOP-MNT-001: Industrial Machine Preventive Maintenance & SOP-IT-002: IT Network Troubleshooting and Incident Resolution",
+      "understanding": "Comparative cross-procedural analysis for query: 'Which roles are responsible for reporting issues in both processes?', synthesizing procedures across SOP-MNT-001: Industrial Machine Preventive Maintenance & SOP-IT-002: IT Network Troubleshooting and Incident Resolution.",
+      "actions": [
+        "[SOP-MNT-001 - 3. Roles and Responsibilities (Part 1)]: Roles and Responsibilities",
+        "[SOP-MNT-001 - 3. Roles and Responsibilities (Part 1)]: Machine Operator: Conducts daily pre-shift visual walk-arounds, verifies fluid levels, records cycle run times, and",
+        "[SOP-MNT-001 - 3. Roles and Responsibilities (Part 1)]: performs precision lubrication; replaces filter elements; and records micrometer alignment tolerances.",
+        "[SOP-IT-002 - 3. Roles and Responsibilities (Part 1)]: Roles and Responsibilities",
+        "[SOP-IT-002 - 3. Roles and Responsibilities (Part 1)]: NOC Tier-1 Analyst: Performs initial alert ingestion, validates scope of outage, logs initial ITSM incident ticket, collects",
+        "[SOP-IT-002 - 3. Roles and Responsibilities (Part 1)]: Network Operations Engineer (Tier-2): Investigates Layer 2 spanning-tree topology shifts, dynamic routing protocol"
+      ],
+      "important_notes": [
+        "Both operational procedures require auditable logging (CMMS for physical maintenance, ITSM/PIR for network incidents).",
+        "Adhere strictly to designated escalation thresholds and authorization protocols across departments."
+      ],
+      "elapsed_ms": 8,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "D1",
+      "group": "D",
+      "query": "What is the recipe for baking chocolate chip cookies?",
+      "expected_doc": "NONE",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "actual_sources": [],
+      "relevant_sop_found": "No matching Standard Operating Procedure found in the repository.",
+      "understanding": "The query regarding 'What is the recipe for baking chocolate chip cookies?' is outside the scope of current operational procedures.",
+      "actions": [
+        "The requested topic ('What is the recipe for baking chocolate chip cookies?') is not documented in the indexed enterprise SOP repository.",
+        "Verify whether an applicable Standard Operating Procedure or technical manual needs to be authored and uploaded to the Knowledge Hub.",
+        "Currently available SOPs cover: Industrial Machine Preventive Maintenance (SOP-MNT-001), IT Network Troubleshooting (SOP-IT-002), Server Connectivity (SOP-IT-001), Security Incident Response (SOP-SEC-004), Linux Kernel Recovery (SOP-SVR-012), Core Switch VLANs (SOP-NET-008), Database Failover (SOP-OPS-022), and Change Management (SOP-GEN-003)."
+      ],
+      "important_notes": [
+        "Strict Grounding Policy: OPERA never hallucinates or fabricates operational procedures without verified source documentation.",
+        "No unverified procedures or citations are generated for out-of-scope inquiries."
+      ],
+      "elapsed_ms": 9,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "D2",
+      "group": "D",
+      "query": "What is the procedure for launching an orbital rocket into outer space?",
+      "expected_doc": "NONE",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "actual_sources": [],
+      "relevant_sop_found": "No matching Standard Operating Procedure found in the repository.",
+      "understanding": "The query regarding 'What is the procedure for launching an orbital rocket into outer space?' is outside the scope of current operational procedures.",
+      "actions": [
+        "The requested topic ('What is the procedure for launching an orbital rocket into outer space?') is not documented in the indexed enterprise SOP repository.",
+        "Verify whether an applicable Standard Operating Procedure or technical manual needs to be authored and uploaded to the Knowledge Hub.",
+        "Currently available SOPs cover: Industrial Machine Preventive Maintenance (SOP-MNT-001), IT Network Troubleshooting (SOP-IT-002), Server Connectivity (SOP-IT-001), Security Incident Response (SOP-SEC-004), Linux Kernel Recovery (SOP-SVR-012), Core Switch VLANs (SOP-NET-008), Database Failover (SOP-OPS-022), and Change Management (SOP-GEN-003)."
+      ],
+      "important_notes": [
+        "Strict Grounding Policy: OPERA never hallucinates or fabricates operational procedures without verified source documentation.",
+        "No unverified procedures or citations are generated for out-of-scope inquiries."
+      ],
+      "elapsed_ms": 9,
+      "passed": true,
+      "fail_reason": ""
+    },
+    {
+      "test_id": "D3",
+      "group": "D",
+      "query": "How do I fix it?",
+      "expected_doc": "NONE",
+      "expected_grounded": false,
+      "actual_grounded": false,
+      "actual_sources": [],
+      "relevant_sop_found": "Clarification Required \u2013 Indefinite Operational Context",
+      "understanding": "Ambiguous operational inquiry: The submitted query does not specify the equipment, system, or operational procedure being referenced.",
+      "actions": [
+        "Please specify the operational domain: Are you troubleshooting Industrial Machinery (SOP-MNT-001) or IT Network Infrastructure (SOP-IT-002)?",
+        "Provide the specific equipment identifier, machine number, switch hostname, or IP address.",
+        "Describe the observable symptoms, error codes, or telemetry readings (e.g. spindle vibration, hydraulic pressure drop, packet loss, or DHCP exhaustion)."
+      ],
+      "important_notes": [
+        "Safety & Operational Mandate: OPERA requires specific equipment context before recommending corrective procedures to avoid safety violations or accidental service disruptions.",
+        "You may browse all standard procedures in the Knowledge Hub or SOP Library."
+      ],
+      "elapsed_ms": 10,
+      "passed": true,
+      "fail_reason": ""
+    }
+  ]
+}

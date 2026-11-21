@@ -1,0 +1,41 @@
+STANDARD OPERATING PROCEDURE: SERVER CONNECTIVITY TROUBLESHOOTING
+Document ID: SOP-IT-001 | Category: IT Operations | Version: 3.2
+Effective Date: 2026-01-15 | Review Frequency: Annual
+
+1. PURPOSE & SCOPE
+This document outlines mandatory procedures for diagnosing and mitigating unexpected network connectivity failures to production server clusters. Applies to all Tier-1 and Tier-2 Systems Administrators and Network Engineers.
+
+2. INITIAL TRIAGE & SYMPTOM ASSESSMENT
+Step 1: Verify host physical status and hypervisor availability via out-of-band management (iDRAC/iLO).
+Step 2: Execute reachability checks from the management bastion:
+  - Run ICMP ping test: ping -c 4 <target_ip>
+  - Check TCP port connectivity: nc -zv -w 3 <target_ip> 22
+Step 3: Review switch port link status on the top-of-rack (ToR) switch for interface flapping or errors.
+
+3. NETWORK STACK DIAGNOSTIC PROTOCOL
+Step 4: Connect to the server console via remote management console:
+  - Check local network interface states: ip link show
+  - Inspect IP configuration and gateway routes: ip route show
+  - Verify DNS resolver responsiveness: resolvectl status or cat /etc/resolv.conf
+Step 5: Check firewall policy drops:
+  - Inspect active iptables rules: sudo iptables -L -n -v
+  - Verify UFW / firewalld status: sudo ufw status verbose
+Step 6: Inspect network socket exhaustion:
+  - Check established connections: ss -tulpn
+  - Look for SYN_RECV or TIME_WAIT overflow.
+
+4. CORRECTIVE REMEDIATION ACTIONS
+Action A: If default gateway route is missing:
+  - Re-add default gateway: sudo ip route add default via <gateway_ip> dev eth0
+  - Restart systemd-networkd: sudo systemctl restart systemd-networkd
+Action B: If interface is down or flapping:
+  - Bounce interface: sudo ip link set dev eth0 down && sudo ip link set dev eth0 up
+  - Check dmesg for driver crash: sudo dmesg -T | grep -i eth
+Action C: If DNS failure is causing service disconnects:
+  - Test query to secondary internal DNS: dig @10.0.0.53 auth.internal.company.net
+  - Flush DNS cache: sudo resolvectl flush-caches
+
+5. SAFETY PRECAUTIONS & ESCALATION MATRIX
+- WARNING: Never execute 'systemctl restart networking' on bonded production interfaces during peak business hours (08:00 - 18:00 UTC) without Change Control approval.
+- Escalation: If packet loss exceeds 20% across multiple nodes on the same rack, immediately notify the Network Operations Center (NOC) Duty Manager and declare a P2 Incident.
+- Reference internal incident bridge: #ops-incident-sev2 on Slack.

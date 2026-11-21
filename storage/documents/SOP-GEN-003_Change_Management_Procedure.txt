@@ -1,0 +1,33 @@
+STANDARD OPERATING PROCEDURE: CHANGE MANAGEMENT & MAINTENANCE
+Document ID: SOP-GEN-003 | Category: General Procedures | Version: 6.0
+Effective Date: 2026-06-01 | Compliance: ITIL v4 / SOC2 Type II
+
+1. OBJECTIVE & COMPLIANCE
+Ensures that all infrastructure and application changes maintain service level agreements (SLAs), minimize downtime risks, and maintain traceable audit records.
+
+2. CHANGE CATEGORIZATION
+- Standard Change: Pre-approved, low-risk routine changes (e.g., certificate renewals, minor OS patch sets). Requires 24h notice.
+- Normal Change: Non-routine modifications with potential service impact (e.g., schema migrations, firewall modifications). Requires CAB review 48h prior.
+- Emergency Change: Urgent remediation to restore service during P1/P2 incidents. Requires verbal sign-off from Incident Commander.
+
+3. SUBMISSION WORKFLOW & REQUIREMENTS
+Step 1: Create RFC ticket in ITSM portal with:
+  - Detailed technical execution plan.
+  - Step-by-step rollback runbook with tested backout criteria.
+  - Expected customer impact and maintenance window timeline.
+Step 2: Schedule during approved maintenance windows:
+  - Standard Window: Tuesdays & Thursdays 02:00 - 05:00 UTC.
+  - Major Infrastructure Window: Sundays 01:00 - 04:00 UTC.
+Step 3: Broadcast customer notification:
+  - Send email announcement to affected stakeholders at least 72 hours in advance.
+  - Post banner notice on system status portal.
+
+4. EXECUTION & POST-IMPLEMENTATION REVIEW (PIR)
+Step 4: Hold pre-maintenance bridge check-in 15 minutes prior to window start.
+Step 5: Execute tasks following written checklist. Record start and stop times.
+Step 6: Execute validation smoke tests before closing the window.
+Step 7: If rollback criteria is met at any point, abort immediately and execute rollback plan.
+
+5. AUDIT REQUIREMENTS
+- All execution logs must be attached to the closed RFC ticket within 24 hours.
+- Failed changes require an automatic Post-Incident Review meeting within 3 business days.
